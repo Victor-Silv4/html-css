@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="nerd_icone.png" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Uma página web pode ser aberta em dispositivos de diferentes tamanhos, por isso é importante que nosso site se adapte para ter uma boa portabilidade para todos os tipos de aparelhos e usuarios. </p>
+
+    <picture> <!--O comando picture permite usar sources para manipular de várias formas a tag img-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png">
+        <img src="imagens/foto-g.png" alt="imagem flexível"> 
+    </picture>
+    
+    <h1>Audios</h1>
+
+    <audio preload="metadata" controls autoplay>
+        <source src="midias/Ice & Fire - King Canyon.mp3" type="audio/mpeg">
+        <source src="midias/Ice & Fire - King Canyon.ogg" type="audio/ogg">
+        <source src="midias/Ice & Fire - King Canyon.wav" type="audio/wav">
+        <p>Seu navegador não suporta repoduzir o áudio, <a href="midias/Ice & Fire - King Canyon.mp3">clique aqui para baixá-lo</a></p>
+    </audio>
+</body>
+</html>

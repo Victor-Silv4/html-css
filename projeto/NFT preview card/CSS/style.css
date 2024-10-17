@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue_BG: hsl(217, 54%, 11%);
+    --Very-dark-blue_card: hsl(216, 50%, 16%);
+    --Very-dark-blue_line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: var(--Very-dark-blue_BG);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    border-radius: 20px 20px 0px 0px;
+    background-color: var(--Very-dark-blue_card);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    position: relative; /* Contêiner relativo */
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Para garantir que nada saia da área da imagem */
+}
+
+.image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan); /* Aplicando a cor ciano */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição suave da cor ciano */
+}
+
+.image-wrapper:hover::before {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.image-wrapper img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    border-radius: 10px;
+}
+
+#view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.image-wrapper:hover #view {
+    opacity: 1; 
+}
+
+
+main h1{
+    color: var(--White);
+    margin: 20px 30px 10px;
+    font-size: 1.6em;
+}
+
+main h1:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+main p{
+    color: var(--Soft-blue);
+    font-size: 1.3em;
+    margin: 10px 30px;
+}
+
+aside{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.ETH, .days {
+    display: flex;
+    align-items: center;
+}
+
+.ETH img, .days img {
+    width: 20px; 
+    height: 20px;
+    margin-left: 10px;
+}
+
+.ETH img{
+    width: 13px;
+}
+
+.ETH p{
+    margin-left: 8px;
+    color: var(--Cyan);
+    font-size: 1em;
+}
+
+.days p{
+    margin-left: 8px;
+    color: var(--Soft-blue);
+    font-size: 1em;
+}
+
+footer{
+    background-color: var(--Very-dark-blue_card);
+    width: 500px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+footer p{
+    color: var(--Soft-blue);
+    font-size: 1em;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--White);
+}

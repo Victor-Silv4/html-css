@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #BCD8B7;
+            margin: 0px;
+        }
+        header{
+            background-color: #93827F;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        header > h1{
+            color: #5f575e;
+        }
+        nav{
+            background-color: #fefffe;
+            padding: 3px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.197);
+            border-radius: 10px;
+        }
+        nav > a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: #E0D2C3;
+            padding: 10px;
+            margin: 10px;
+        }
+        article{
+            background-color: #6BA292;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.188);
+        }
+        article > aside{
+            background-color: #93827F;
+            text-align: center;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <h1>Meu Site</h1>
+        <nav> <!--Navegação-->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias"> <!--Seção-->
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro maxime modi est accusantium magni unde fugiat ad numquam culpa totam vitae vero veritatis dolores cum a, rem nobis, adipisci sunt. lor</p>
+                 <aside> <!--Conteúdo sencundário-->
+                    <p>Artigo escrito por José Silva</p>
+                </aside>   
+            </article>     
+        </section>
+    </main>
+    <footer> <!--Rodapé-->
+        <p>Desenvolvido por Victor</p>
+    </footer>
+</body>
+</html>

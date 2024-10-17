@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    max-width: 800px;
+    height: auto;
+    align-items: flex-start;
+    justify-content: center;  
+    margin: 0 auto;
+}
+
+.sedan{
+    width: 33%;
+    height: 100%;
+    background-color: var(--Bright-orange);
+    border-radius: 8px 0px 0px 8px;
+}
+
+.suv{
+    width: 33%;
+    height: 100%;
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    width: 33%;
+    height: 100%;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0px 8px 8px 0px;
+}
+
+h1{
+    color: var(--Very-light-gray);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2em;
+    padding: 0px 40px 20px 40px;
+}
+
+p{
+    color: var(--Transparent-white);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1em;
+    text-align: left;
+    padding: 0px 40px 40px 40px;
+}
+
+img{
+    padding: 40px 40px 20px 40px;
+}
+
+.container button{
+    margin: 40px 40px;
+    padding: 15px 20px;
+    max-width: 90%;
+    font-family: "Lexend Deca", sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--Very-light-gray);
+    border-radius: 30px;
+}
+
+.sedan button{
+    color: var(--Bright-orange);
+}
+
+.suv button{
+    color: var(--Dark-cyan);
+}
+
+.luxury button{
+    color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 600px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    .sedan, .suv, .luxury {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0; 
+        padding-bottom: 20px;
+
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    p{
+        padding-bottom: 10px;
+        font-size: 1.5em;
+        text-align: left;    
+    }
+
+    img{
+        width: 40%;
+    }
+
+    .container button{
+        font-size: 1em;
+        width: 70%; 
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 400px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .sedan, .suv, .luxury {
+        width: 100%;
+        height: 100%;
+        border-radius: 0; 
+        padding-bottom: 20px;
+
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    p{
+        padding-bottom: 5px;
+        font-size: 1em;
+        text-align: left;    
+    }
+
+    .container button{
+        font-size: 1em;
+        max-width: 70%; 
+        margin-right: 0;
+    }
+}

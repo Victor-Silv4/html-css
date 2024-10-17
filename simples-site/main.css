@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body{
+    background: var(--bg);
+    color: var(--fontcolor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor1: #00FF00;
+    --cor2: #000;
+    --cor3: #fff;
+}
+
+.ligth-theme{
+    --bg: var(--cor1);
+    --fontcolor: var(--cor2)
+
+}
+
+.dark-theme{
+    --bg: var(--cor2);
+    --fontcolor: var(--cor1)
+}
+
+h1{
+    font-size: 3em;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.325);
+}
+
+li{
+    list-style: circle;
+}
+
+.list{
+    list-style: square;
+}

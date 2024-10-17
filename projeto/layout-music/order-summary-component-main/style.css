@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright_blue: hsl(245, 75%, 52%);
+    --Very_pale_blue: hsl(225, 100%, 98%);
+    --Desaturated_blue: hsl(224, 23%, 55%);
+    --Dark_blue: hsl(223, 47%, 23%);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 139, 0.2);
+}
+
+.ilustration{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.ilustration img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+h1{
+    margin: 40px 40px 15px 40px;
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--Dark_blue);
+}
+
+p{
+    text-align: center;
+    padding: 0px 70px;
+    text-indent: -0.5em;
+    font-size: 1.3em;
+}
+
+.aside{
+    width: 100%;
+}
+
+.anual_plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very_pale_blue);
+    padding: 20px;
+    margin: auto 20px;
+
+}
+
+.anual_plan img{
+    margin: 20px;
+    width: 70px;
+}
+
+.anual_plan p{
+    padding: 0px 30px;
+}
+
+.anual_plan a{
+    margin: auto 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--Bright_blue);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button{
+    cursor: pointer;
+    border: none;
+    padding: 20px 145px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.payment{
+    background-color: var(--Bright_blue);
+    color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 139, 0.459);
+    margin-top: 10px;
+}
+
+.cancel{
+    background-color: white;
+    color: var(--Desaturated_blue);
+}
+
+.attribution{ 
+    font-size: 16px; 
+    text-align: center; 
+    padding: 20px;
+    margin-top: 20px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    background-color: var(--Very_pale_blue);
+} 
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        padding: 0px 60px;
+        font-size: 1.2em;
+    }
+
+    .aside{
+        width: 100%;
+    }
+
+    .anual_plan img {
+        margin-bottom: 10px;
+        width: 70px;
+    }
+
+    .anual_plan a {
+        margin-top: 10px;
+    }
+
+    .buttons button {
+        font-size: 1.3em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        padding: 0 10px;
+        font-size: .8em;
+    }
+
+    .aside{
+        width: 100%;
+    }
+
+    .anual_plan img {
+        margin-bottom: 10px;
+        width: 40px;
+    }
+
+    .anual_plan a {
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+    .buttons button {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+}

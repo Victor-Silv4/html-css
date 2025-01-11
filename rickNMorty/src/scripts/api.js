@@ -57,8 +57,9 @@ async function convertCharacterToHtml(character) {
                 const characterId = characterElement.id;
                 console.log(`Character ID: ${characterId}`);
 
-                // Redireciona para a página de detalhes passando o ID na URL
-                window.location.href = `../../detail.html?id=${characterId}`;
+                const baseURL = window.location.hostname === "victor-silv4.github.io" ? "/html-css/rickNMorty/" : "../../";
+                
+                window.location.href = `${baseURL}detail.html?id=${characterId}`;;
             }
         });
     });

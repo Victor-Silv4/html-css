@@ -89,3 +89,167 @@ body {
     font-size: .8rem;
     font-weight: 500;
 }
+
+@media (max-width: 1500px) {
+    .char-info {
+        margin: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .char-info h2 {
+        font-size: 3rem;
+        margin: 20px;
+    }
+
+    .char-info::after {
+        width: 200px;
+        height: 200px;
+        bottom: -50px;
+        right: 5px;
+    }
+
+    .basic-info {
+        margin: 20px 0px 20px 10px;
+    }
+
+    .basic-info span {
+        font-size: 1.6rem;
+        margin: 15px 20px;
+    }
+
+    .episodes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer::after {
+        width: 250px;
+        height: 250px;
+        right: 50px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .char-info {
+        margin: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .char-info h2 {
+        font-size: 3rem;
+        margin: 20px;
+    }
+
+    .char-info img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .char-info::after {
+        width: 50%;
+        height: 50%;
+        bottom: -50px;
+        left: -130px;
+    }
+
+    .basic-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .basic-info span {
+        font-size: 1.6rem;
+        margin: 15px 0;
+    }
+
+    .episodes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .char-info {
+        margin: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .char-info h2 {
+        font-size: 3rem;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .char-info img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .char-info::after {
+        width: 50%;
+        height: 50%;
+        bottom: -50px;
+        left: -90px;
+    }
+
+    .basic-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .basic-info span {
+        font-size: 1.3rem;
+        margin: 15px 0;
+    }
+
+    .episodes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .char-info {
+        margin: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .char-info h2 {
+        font-size: 2.3rem;
+        margin-left: -50px;
+        margin-right: 0;
+        color: #000;
+    }
+
+    .char-info img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .char-info::after {
+        width: 50%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .basic-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .basic-info span {
+        font-size: .8rem;
+        margin: 15px 0;
+    }
+
+    .episodes {
+        grid-template-columns: 1fr;
+    }
+}

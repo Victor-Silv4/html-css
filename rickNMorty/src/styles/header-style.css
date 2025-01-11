@@ -39,3 +39,27 @@ header::after {
 
     z-index: 0;
 }
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header::before {
+        width: 100px;
+        height: 100px;
+        right: 80px;
+        bottom: -10px;
+    }
+
+    header::after {
+        width: 90px;
+        height: 90px;
+        right: 30px;
+    }
+}

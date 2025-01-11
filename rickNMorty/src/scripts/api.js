@@ -57,9 +57,9 @@ async function convertCharacterToHtml(character) {
                 const characterId = characterElement.id;
                 console.log(`Character ID: ${characterId}`);
 
-                const baseURL = window.location.hostname === "victor-silv4.github.io" ? "/html-css/rickNMorty/" : "../../";
+                const baseURL = window.location.hostname === "victor-silv4.github.io"? `${window.location.origin}/html-css/rickNMorty/`: "../../";  
                 
-                window.location.href = `${baseURL}detail.html?id=${characterId}`;;
+                window.location.href = `${baseURL}detail.html?id=${characterId}`;
             }
         });
     });

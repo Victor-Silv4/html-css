@@ -1,0 +1,41 @@
+header {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 50px 10px;
+    position: relative;
+    
+}
+
+header::before {
+    content: "";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-image: url("../../src/images/rick-and-morty-runaa-silhouette-max-thompson.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 90%;
+    right: 130px;
+    bottom: -10px;
+
+    z-index: 1;
+}
+
+header::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: url("../../src/images/112-1128851_rick-and-morty-portal-png-pixel-art-rick-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    right: 0;
+    bottom: -10px;
+
+    z-index: 0;
+}

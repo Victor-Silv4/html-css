@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/styles/header-style.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/detail.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+
+
+
+    <link rel="shortcut icon" href="src/images/favcon.jpeg" type="image/x-icon">
+    <title>Character Detail</title>
+</head>
+<body>
+    <div class="container">
+        <header> <h1 id="main-title">Rick and Morty</h1></header>
+        <div class="char-info">
+            
+        </div>
+
+        <div class="episodes-field">
+            <h2 class="episode-h2">Episodes</h2>
+            <ul class="episodes">
+                
+            </ul>
+        </div>
+            
+        <footer>
+            <p>Developed by <a href="https://github.com/Victor-Silv4" target="_blanks">Victor Augusto</a></p>
+        </footer>
+
+    </div>
+
+    <script src="src/scripts/character-model.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const characterId = urlParams.get('id');
+
+        console.log(characterId)
+        
+        // Função para carregar as informações detalhadas do personagem
+        async function fetchCharacterDetail(url) {
+            return fetch(url)
+                .then((response) => response.json())
+                .then((details) => convertDetailsToObject(details))
+                .then((characterDetails) => convertDetailsToHtml(characterDetails));
+        }
+
+        async function convertDetailsToObject(details) {
+            const characterDetails = new Character();
+            characterDetails.id = details.id;
+            characterDetails.name = details.name;
+            characterDetails.status = details.status;
+            characterDetails.species = details.species;
+            characterDetails.gender = details.gender;
+            characterDetails.origin = details.origin.name;
+            characterDetails.location = details.location.name;
+            characterDetails.image = details.image;
+            characterDetails.episodes = details.episode;
+            characterDetails.created = details.created;
+
+            return characterDetails;
+        }
+
+        async function convertDetailsToHtml(details) {
+            const newCharacterPage = `
+                    <img src="${details.image}" alt="${details.name} image">
+                    <div class="top-content">
+                        <h2>${details.name}</h2>
+                        <div class="basic-info">
+                            <span>Species: ${details.species}</span>
+                            <span>Gender: ${details.gender}</span>
+                            <span>Status: ${details.status}</span>
+                        </div>
+                    </div>`;
+
+        async function covertEpisodeToHtml(episode) {
+                return `<li class="episode">
+                        <div class="episode-detail">
+                            <span class="episode-name">${episode.name}</span>
+                            <span class="episode-number">${episode.episode}</span>
+                            <span class="episode-date">${episode.air_date}</span>
+                        </div>
+                    </li>`
+            }
+
+            const newEpisodeList = document.querySelector(".episodes")
+
+            console.log(newEpisodeList)
+
+            const episodeList = await Promise.all(
+                details.episodes.map((episode) => 
+                fetch(episode)
+                    .then((response) => response.json())
+                    .then((episodes) => covertEpisodeToHtml(episodes))
+                )
+            );
+
+            console.log(episodeList);
+
+            newEpisodeList.innerHTML = episodeList.join('');
+
+            const detailHtml = document.querySelector(".char-info");
+            detailHtml.innerHTML = newCharacterPage;
+        }
+
+
+
+        // Chama a função para obter os detalhes do personagem
+        const characterUrl = `https://rickandmortyapi.com/api/character/${characterId}`;
+        fetchCharacterDetail(characterUrl);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.char-info {
+    display: flex;
+    margin: 50px;
+    padding: 10px;
+    background-color: #808080;
+    position: relative;
+    border-radius: 10px;
+}
+
+.char-info h2 {
+    font-size: 3rem;
+    margin: -15px 20px 10px;
+    color: #96e323;
+}
+
+.char-info img {
+    background-color: #96e323;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.char-info span {
+    font-size: 2rem;
+    margin: 50px 70px 20px 20px;
+}
+
+.char-info::after {
+    content: "";
+    background-image: url("../../src/images/Meeseeks_box.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+}
+
+.basic-info {
+    display: flex;
+    align-items: center;
+}
+
+.episodes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 50px;
+}
+
+.episode-h2 {
+    margin: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #96e323;
+}
+
+.episode {
+    margin-bottom: 20px;
+    background-color: #808080;
+    border-radius: 10px;
+}
+
+.episode-detail {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+}
+
+.episode-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.episode-name:hover {
+    color: #96e323;
+    cursor: pointer;
+}
+
+.episode-number {
+    font-size: .8rem;
+    font-weight: 500;
+}

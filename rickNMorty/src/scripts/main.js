@@ -1,0 +1,1 @@
+chacterList = document.getElementsByClassName("characters");

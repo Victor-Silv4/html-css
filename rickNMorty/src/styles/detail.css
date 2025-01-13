@@ -178,7 +178,7 @@ body {
     }
 
     .char-info h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-left: 10px;
         margin-right: 0;
     }
@@ -211,7 +211,7 @@ body {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 450px) {
 
     .char-info {
         margin: 0;

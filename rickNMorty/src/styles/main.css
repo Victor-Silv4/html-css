@@ -114,43 +114,7 @@ main {
     transition: transform ease-in .3s;
 }
 
-footer {
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    width: 100vw;
-    height: 150px;
-    position: relative;
-    margin-top: 50px;
-}
 
-footer::after {
-    content: "";
-    background-image: url("../../src/images/spaceship.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-
-    transform: scaleX(-1) rotate(30deg);
-    z-index: 2;
-
-}
-
-footer  a {
-    color: #96e323;
-}
-
-footer  a:hover {
-    color: #663399;
-}
 
 @media (max-width: 1500px) {
     .character {

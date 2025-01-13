@@ -1,0 +1,82 @@
+footer {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 150px;
+    position: relative;
+    margin-top: 50px;
+}
+
+footer::after {
+    content: "";
+    background-image: url("../../src/images/spaceship.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+
+    transform: scaleX(-1) rotate(30deg);
+    z-index: 2;
+
+}
+
+footer  a {
+    color: #96e323;
+}
+
+footer  a:hover {
+    color: #663399;
+}
+
+@media (max-width: 1500px) {
+    footer::after {
+        width: 300px;
+        height: 300px;
+        bottom: 80px;
+        right: 70px;
+    }
+}
+
+@media (max-width: 1200px) {
+    footer::after {
+        width: 200px;
+        height: 200px;
+        bottom: 80px;
+        right: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    footer::after {
+        width: 200px;
+        height: 200px;
+        bottom: 90px;
+        right: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer::after {
+        width: 150px;
+        height: 150px;
+        bottom: 100px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    footer::after {
+        width: 100px;
+        height: 100px;
+        bottom: 100px;
+        right: 20px;
+    }
+}

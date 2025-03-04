@@ -33,9 +33,9 @@ const changeNations = (nation) => {
 
         nationDiv.classList.add("water");
         
-        nationImages[0].src = "../src/images/water_tribe/water_tribe_temple.png";
-        nationImages[1].src = "../src/images/water_tribe/water_tribe_people.jpg";
-        nationImages[2].src = "../src/images/water_tribe/water_tribe_bending.jpg";
+        nationImages[0].src = "./src/images/water_tribe/water_tribe_temple.png";
+        nationImages[1].src = "./src/images/water_tribe/water_tribe_people.jpg";
+        nationImages[2].src = "./src/images/water_tribe/water_tribe_bending.jpg";
         nationImages.forEach((img) => {
             img.style.display = "block";
         });
@@ -46,9 +46,9 @@ const changeNations = (nation) => {
 
 
         bendingsDiv.style.display = "flex";
-        nationBendings[0].src = "../src/images/water_tribe/heal_bending.png";
-        nationBendings[1].src = "../src/images/water_tribe/ice_bending.png";
-        nationBendings[2].src = "../src/images/water_tribe/blood_bending.png";
+        nationBendings[0].src = "./src/images/water_tribe/heal_bending.png";
+        nationBendings[1].src = "./src/images/water_tribe/ice_bending.png";
+        nationBendings[2].src = "./src/images/water_tribe/blood_bending.png";
 
         nationDiv.scrollIntoView({
             behavior: 'smooth'

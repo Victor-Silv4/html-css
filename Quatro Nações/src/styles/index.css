@@ -10,6 +10,20 @@
     --nation_symbol_url: url("../images/water_tribe/koi_fish.png");
 }
 
+.air {
+    --default_detail_color: #F9A03F;
+    --nation_symbol_url: url("../images/air_nomads/sky_bison.png");
+}
+
+.fire {
+    --default_detail_color: #F03A47;
+    --nation_symbol_url: url("../images/fire_nation/fire_dragon.png");
+}
+
+.earth {
+    --default_detail_color: #498467;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -184,8 +198,15 @@ section .slides {
     justify-content: center;
     width: 100%;
     padding: 50px 20px;
-    margin-top: 80px;
+    margin-top: 30px;
     background-color: var(--default_background_color);
+}
+
+.nation-sumary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nation .nation-name {
@@ -194,8 +215,6 @@ section .slides {
 }
 
 .nation .nation-description {
-    width: 100%;
-    margin-left: 13%;
     color: var(--default_detail_color);
 }
 
@@ -252,7 +271,22 @@ section .slides {
     position: absolute;
     top: -100px;
     right: 800px;
+}
+
+.nation.water .nation-philosophy-description::before {
     animation: spinAnimation 5s linear infinite;
+}
+
+.nation.air .nation-philosophy-description::before {
+    width: 500px;
+    height: 500px;
+    animation: bounceAnimation 5s linear infinite;
+}
+
+.nation.fire .nation-philosophy-description::before {
+    width: 350px;
+    height: 350px;
+    animation: bounceAnimation 5s linear infinite;
 }
 
 .subbending-field {
@@ -312,4 +346,20 @@ section .slides {
     100% {
         transform: rotateZ(-360deg);
     }
+}
+
+@keyframes bounceAnimation {
+    0%, 100% {
+        transform: translateY(0);  
+    }
+    25% {
+        transform: translateY(-30px); 
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+
 }
